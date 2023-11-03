@@ -1,16 +1,16 @@
 # Setup
-title:               Taeryung Lee (이태룡) | Ph.D Candidate
+title:               Jeongtaek Oh (오정택) | Ph.D Candidate
 tagline:             ''
-url:                 https://taeryunglee.github.io
+url:                 https://taekkii.github.io
 baseurl:             ''
 paginate:            5
 permalink:           pretty
 
 # About/contact
 author:
-  name:              Taeryung Lee
-  url:               https://taeryunglee.github.io
-  email:             trlee94@snu.ac.kr
+  name:              Jeongtaek Oh
+  url:               https://taekkii.github.io
+  email:             ohjtgood@gmail.com
 
 # Gems
 plugins:
