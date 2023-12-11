@@ -104,14 +104,14 @@
       <a href="https://robot0321.github.io" target="_blank">Jaeyoung Chung</a><sup></sup>, 
       <a>Dongwoo Lee</a><sup></sup>, 
       <a>Taekyoung Kim</a><sup></sup>, 
-      <a>Jin Hwa Kim</a><sup></sup>, 
+      <a>Jin-Hwa Kim</a><sup></sup>, 
       <a href="https://cv.snu.ac.kr/index.php/~kmlee/" target="_blank">Kyoung Mu Lee</a><sup></sup>
     </p>
 
     <!-- affiliations -->
     <p class="subtitle is-5 publication-authors"> 
-    <sup></sup> Computer Vision Lab, Seoul National University &nbsp; </br> </br>
-    <sup></sup> NAVER LABS &nbsp; </br> </br>
+    <sup></sup> Computer Vision Lab, Seoul National University, NAVER LABS &nbsp; </br> </br>
+    <!--sup></sup> NAVER LABS &nbsp; </br> </br-->
     <a href="https://cv.snu.ac.kr"> <img style="width:20%" src="image/logo_cvlab.png"> </a>
     </p>
     <!-- <div class="is-size-5 publication-authors"> -->
@@ -168,11 +168,11 @@
         </p>
 
         <!-- main figure -->
-        <!-- <p class="title is-3 mt-5 has-text-centered"> Method </p> -->
-        <img src="image/DRGSmethod.jpg", alt="Algorithm description of LucidDreamer", width="100%", height="100%"> </img>
+        <p class="title is-3 mt-5 has-text-centered"> Method </p>
+        <img src="image/deblatting_method.png", alt="method", width="100%", height="100%"> </img>
         <p class="content has-text-centered is-size-5">
-        We optimize the Gaussian splatting using dense depth maps adjusted with the COLMAP point cloud. 
-        By incorporating depth maps to regulate the geometry of the 3D scene, our model successfully reconstructs scenes using a limited number of images.
+        We jointly optimize gaussian splatting with camera motion trajectory which explains blurry observation when averaged.
+
         </p>
     </div>
     <br/> <br/>
@@ -182,123 +182,52 @@
     <!-- ablations -->
     <section class="hero is-light is-small">
         <br/>
-        <p class="title is-3 mt-5 has-text-centered"> Experiment Result (2-shot) </p>
+        <p class="title is-3 mt-5 has-text-centered"> Experiment Result </p>
         <div class="hero-body">
           <div class="container">
             <div id="results-carousel1" class="carousel results-carousel">
               <div class="item">
-                <div class="twentytwenty-container" data-orientation="horizontal" ratio="2.0">
+                <div class="twentytwenty-container" data-orientation="horizontal" ratio="0.66">
                   <div class="video">
                     <video poster="" id="fantasy_back" autoplay controls muted loop playsinline height="100%">
-                      <source src="./video/method1_fern_2shot.mp4" type="video/mp4">
+                      <source src="./video/blurball_original.mp4" type="video/mp4">
                     </video>
                   </div>
                   <div class="video">
                     <video poster="" id="fantasy_back" autoplay controls muted loop playsinline height="100%">
-                      <source src="./video/method2_fern_2shot.mp4" type="video/mp4">
-                    </video>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="twentytwenty-container" data-orientation="horizontal" ratio="2.0">
-                  <div class="video">
-                    <video poster="" id="fantasy_back" autoplay controls muted loop playsinline height="100%">
-                      <source src="./video/method1_flower_2shot.mp4" type="video/mp4">
-                    </video>
-                  </div>
-                  <div class="video">
-                    <video poster="" id="fantasy_back" autoplay controls muted loop playsinline height="100%">
-                      <source src="./video/method2_flower_2shot.mp4" type="video/mp4">
+                      <source src="./video/blurball_ours.mp4" type="video/mp4">
                     </video>
                   </div>
                 </div>
               </div>
               <div class="item">
-                <div class="twentytwenty-container" data-orientation="horizontal" ratio="2.0">
+                <div class="twentytwenty-container" data-orientation="horizontal" ratio="0.66">
                   <div class="video">
                     <video poster="" id="fantasy_back" autoplay controls muted loop playsinline height="100%">
-                      <source src="./video/method1_fortress_2shot.mp4" type="video/mp4">
+                      <source src="./video/camellia_original.mp4" type="video/mp4">
                     </video>
                   </div>
                   <div class="video">
                     <video poster="" id="fantasy_back" autoplay controls muted loop playsinline height="100%">
-                      <source src="./video/method2_fortress_2shot.mp4" type="video/mp4">
-                    </video>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="twentytwenty-container" data-orientation="horizontal" ratio="2.0">
-                  <div class="video">
-                    <video poster="" id="fantasy_back" autoplay controls muted loop playsinline height="100%">
-                      <source src="./video/method1_horns_2shot.mp4" type="video/mp4">
-                    </video>
-                  </div>
-                  <div class="video">
-                    <video poster="" id="fantasy_back" autoplay controls muted loop playsinline height="100%">
-                      <source src="./video/method2_horns_2shot.mp4" type="video/mp4">
+                      <source src="./video/camellia_ours.mp4" type="video/mp4">
                     </video>
                   </div>
                 </div>
               </div>
-              <!-- <div class="item">
-                <div class="twentytwenty-container" data-orientation="horizontal" ratio="2.0">
-                  <div class="video">
-                    <video poster="" id="fantasy_back" autoplay controls muted loop playsinline height="100%">
-                      <source src="./video/method1_orchids_2shot.mp4" type="video/mp4">
-                    </video>
-                  </div>
-                  <div class="video">
-                    <video poster="" id="fantasy_back" autoplay controls muted loop playsinline height="100%">
-                      <source src="./video/method2_orchids_2shot.mp4" type="video/mp4">
-                    </video>
-                  </div>
-                </div>
-              </div> -->
-              <div class="item">
-                <div class="twentytwenty-container" data-orientation="horizontal" ratio="2.0">
-                  <div class="video">
-                    <video poster="" id="fantasy_back" autoplay controls muted loop playsinline height="100%">
-                      <source src="./video/method1_room_2shot.mp4" type="video/mp4">
-                    </video>
-                  </div>
-                  <div class="video">
-                    <video poster="" id="fantasy_back" autoplay controls muted loop playsinline height="100%">
-                      <source src="./video/method2_room_2shot.mp4" type="video/mp4">
-                    </video>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="twentytwenty-container" data-orientation="horizontal" ratio="2.0">
-                  <div class="video">
-                    <video poster="" id="fantasy_back" autoplay controls muted loop playsinline height="100%">
-                      <source src="./video/method1_trex_2shot.mp4" type="video/mp4">
-                    </video>
-                  </div>
-                  <div class="video">
-                    <video poster="" id="fantasy_back" autoplay controls muted loop playsinline height="100%">
-                      <source src="./video/method2_trex_2shot.mp4" type="video/mp4">
-                    </video>
-                  </div>
-                </div>
-              </div>
-            </div>
+              
+             </div>
             </div>
         </div>
         <!-- </section> -->
         <br/> 
-        <div class="hero-body">
+        <!-- <div class="hero-body">
             <div class="container">
-            <!-- <section class="hero is-light is-small"> -->
-            <p class="title is-3 mt-5 has-text-centered"> Experiment Result (2-shot) </p>
+            <p class="title is-3 mt-5 has-text-centered"> Experiment Result </p>
             <p class="content has-text-centered is-size-5">
-                <!-- &#128071; <b>Click and drag</b> (navigate) / <b>shift and scroll</b> (zoom) <br> -->
                 <b>3DGS</b> (left) / <b>Ours</b> (right) 
             </p> 
             <div>
-                <iframe id="3DGS_fern_2shot" src='https://my.spline.design/untitled-17c9747ce9a293d9b651b10cad17130f/' frameborder='0' width="49.5%" height="480"></iframe>
+                <iframe id="3DGS_fern_2shot" src='https://my.spline.design/untitled-2b6be1e27570a1f698a7a7781d2ff4de/' frameborder='0' width="49.5%" height="480"></iframe>
                 <iframe id="Ours_fern_2shot" src='https://my.spline.design/untitled-28d802946f3f1d0d35f7396b3634fd7a/' frameborder='0' width="49.5%" height="480"></iframe>
             </div>
             <br/>
@@ -308,9 +237,8 @@
             </div>
             <p class="content has-text-centered is-size-5">
                 &#128070; <b>Click and drag</b> (navigate) / <b>shift and scroll</b> (zoom) <br>
-                <!-- <b>3DGS</b> (left) / <b>Ours</b> (right)  -->
             </p> 
-        </div>
+        </div> -->
         </div>
     </section>
     <!-- </div> -->
@@ -319,7 +247,7 @@
     <script>
         bulmaCarousel.attach('#results-carousel1', {
             slidesToScroll: 1,
-            slidesToShow: 4
+            slidesToShow: 2
         });
         $(function(){
             $(".twentytwenty-container").twentytwenty({
@@ -335,106 +263,20 @@
     <!--  -->
     <!-- [> main container <] -->
     <!-- <section class="section"> -->
-    <div class="container">
-        <!-- <p class="title is-3 mt-5 has-text-centered"> Perceptual Quality </p>
-        <p class="content is-size-6 has-text-justified">
-        CLIP-based Quantitative comparison of generated scenes from images generated by Stable Diffusion. We
-        quantitatively compare the results using CLIP-Score and CLIP-
-        IQA with RGBD2. For CLIP-IQA, we use quality, colorful, and sharp criteria. LucidDreamer shows dominating results on all metrics.
-        </p>
-        <p>
-        \[
-        \begin{array}{|c|cccc|cccc|cccc|}
-        \hline
-        \text{Models} & \text{CLIP-Score} \uparrow & \text{CLIP-IQA Quality} \uparrow & \text{CLIP-IQA Colorful} \uparrow & \text{CLIP-IQA Sharp} \uparrow \\
-        \hline
-        \text{RGBD2} & 0.2035 & 0.1279 & 0.2081 & 0.0126 \\
-        \textbf{LucidDreamer} & \textbf{0.2110} & \textbf{0.6161} & \textbf{0.8453} & \textbf{0.5356} \\
-        \hline
-        \end{array}
-        \]
-        </p>
-        <br/> -->
+    <!-- <div class="container">
 
 
         <p class="title is-3 mt-5 has-text-centered"> Additional Experiment: Precise Depth </p>
         <p class="content is-size-6 has-text-centered">
             <b>Example results utilizing pseudo-GT depth (oracle).</b>
-            <!-- Precise depth facilitates high-quality 3D reconstruction, even with a limited number of images.  -->
+            <!- - Precise depth facilitates high-quality 3D reconstruction, even with a limited number of images.  - ->
             We confirm that the geometric cues provided by depth become significantly beneficial for the reconstruction in Gaussian splatting, especially when the number of images is limited.
             This fact is reaffirmed by the remarkably high performance of the oracle, which employs accurate geometry.
-            <!-- Fine details are perceptible in both RGB and depth. -->
+            <!- - Fine details are perceptible in both RGB and depth. - ->
         </p>
         <img src="image/oracle.jpg", alt="Algorithm description of LucidDreamer", width="100%", height="100%"> </img>
-        <!-- <div class="hero-body">
-            <div class="container">
-              <div id="results-carousel1" class="carousel results-carousel">
-                    <div class="item">
-                            <div class="video">
-                            <video poster="" id="fantasy_back" autoplay controls muted loop playsinline width="24.5%">
-                                <source src="./video/method1_fern_2shot.mp4" type="video/mp4">
-                            </video>
-                            </div>
-                            <div class="video">
-                            <video poster="" id="fantasy_back" autoplay controls muted loop playsinline width="24.5%">
-                                <source src="./video/method1_fern_2shot.mp4" type="video/mp4">
-                            </video>
-                            </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
-        <!-- <img src="image/fig3.png", alt="Intermeidate prompting for diverse control of scene genreation", width="100%", height="100%"> </img>
-        <p class="content has-text-centered is-size-5">
-        LucidDreamer can accept a sequence of text prompts for scene generation, enabling fine-grained controls.
-        </p>
-
-        <p class="title is-3 mt-5 has-text-centered"> Perceptual Quality </p>
-        <img src="image/fig4.png", alt="Perceptual quality comparison", width="100%", height="100%"> </img>
-        
-        <p class="content is-size-6 has-text-justified">
-        CLIP-based Quantitative comparison of generated scenes from images generated by Stable Diffusion. We
-        quantitatively compare the results using CLIP-Score and CLIP-
-        IQA with RGBD2. For CLIP-IQA, we use quality, colorful, and sharp criteria. LucidDreamer shows dominating results on all metrics.
-        </p>
-        <p>
-        \[
-        \begin{array}{c|c|ccc}
-        \hline
-        \text{Models} & \text{CLIP-Score} \uparrow & \text{CLIP-IQA Quality} \uparrow & \text{CLIP-IQA Colorful} \uparrow & \text{CLIP-IQA Sharp} \uparrow \\
-        \hline
-        \text{RGBD2} & 0.2035 & 0.1279 & 0.2081 & 0.0126 \\
-        \textbf{LucidDreamer} & \textbf{0.2110} & \textbf{0.6161} & \textbf{0.8453} & \textbf{0.5356} \\
-        \hline
-        \end{array}
-        \]
-        </p>
-
-        <p class="title is-3 mt-5 has-text-centered"> Reconstruction Quality </p>
-        <p class="content is-size-6 has-text-justified">
-        Reconstruction metrics of Gaussian splats according to the source of initial SfM points. We use the initial point cloud generated by
-        COLMAP and compare the reconstruction results. Using our point cloud consistently shows better reconstruction metrics.
-        </p>
-        <p>
-        \[
-        \begin{array}{c|c|ccc}
-        \hline
-        \text{Iters} & \text{Source of SfM points} & \text{PSNR} \uparrow & \text{SSIM} \uparrow & \text{LPIPS} \downarrow \\
-        \hline
-        1000 & \text{COLMAP} & 23.15 & 0.7246 & 0.2910 \\
-        & \textbf{LucidDreamer} & \textbf{32.59} & \textbf{0.9672} & \textbf{0.0272} \\
-        \hline
-        3000 & \text{COLMAP} & 30.87 & 0.9478 & 0.0353 \\
-        & \textbf{LucidDreamer} & \textbf{33.80} & \textbf{0.9754} & \textbf{0.0178} \\
-        \hline
-        7000 & \text{COLMAP} & 32.52 & 0.9687 & 0.0208 \\
-        & \textbf{LucidDreamer} & \textbf{34.24} & \textbf{0.9781} & \textbf{0.0164} \\
-        \hline
-        \end{array}
-        \]
-        </p> -->
-    </div>
+      
+    </div> -->
 </section>
 
 
