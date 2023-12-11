@@ -52,7 +52,7 @@
   <!-- icon -->
   <!-- <link rel="icon" href="./image/favicon.ico"> -->
   <title>
-    DepthRegGS
+    3D Gaussian Deb-latting
   </title>
 </head>
 <body>
@@ -137,7 +137,7 @@
           <span class="icon">
               <i class="ai ai-arxiv"></i>
           </span>
-          <span>Paper</span>
+          <span>Paper (Not yet)</span>
         </a>
       </span>
       <span class="icon-text mx-1">
@@ -159,14 +159,12 @@
         <!-- abstract -->
         <p class="title is-3 mt-5 has-text-centered"> Abstract </p>
         <p class="content is-size-6 has-text-justified">
-        In this paper, we present a method to optimize Gaussian splatting with a limited number of images while avoiding overfitting. 
-        Representing a 3D scene by combining numerous Gaussian splats has yielded outstanding visual quality. 
-        However, it tends to overfit the training views when only a small number of images are available. 
-        To address this issue, we introduce <b>a dense depth map as a geometry guide</b> to mitigate overfitting. 
-        We obtained the depth map using a pre-trained monocular depth estimation model and aligning the scale and offset using sparse COLMAP feature points. 
-        The adjusted depth aids in the color-based optimization of 3D Gaussian splatting, mitigating floating artifacts, and ensuring adherence to geometric constraints. 
-        We verify the proposed method on the NeRF-LLFF dataset with varying numbers of few images. 
-        Our approach demonstrates robust geometry compared to the original method that relies solely on images.
+        We propose 3D Gaussian Deb-latting: a method to optimize sharp 3D Gaussian Splatting with blurry set of images.
+        3D Gaussian Splatting has risen as an emerging trend in both of computer vision and graphics fields for its high fidelity and also rendering speed.
+        However, it is challenging to obtain high-quality sharp scene when we have only blurry images caused by extreme motion.
+        To address this, we incorporate auxiliary curve estimation model which optimizes camera trajectory explaining motion for each input images.
+        To be specific, our pipeline optimizes Bezier curve representing camera motion, where we sample multiple camera poses whose average of rendering is supervised with blurry observations. 
+        Our model achieves state-of-the-art performance in terms of qualtiy and efficiency in not only synthetic dataset made from Blender, but also real datasets (Real-Camera-Motion-Blur and Exblur.) 
         </p>
 
         <!-- main figure -->
@@ -440,7 +438,7 @@
 </section>
 
 
-<section class="section">
+<!--section class="section">
     <div class="container has-text-centered">
         <div class="card mt-4">
         <header class="card-header">
@@ -456,7 +454,7 @@
         </div>
         </div>
     </div>
-</section>
+</section-->
 
 <footer class="footer">
   <div class="container">
