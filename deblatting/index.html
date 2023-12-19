@@ -169,62 +169,94 @@
 
         <!-- main figure -->
         <p class="title is-3 mt-5 has-text-centered"> Method </p>
-        <img src="image/deblatting_method.png", alt="method", width="100%", height="100%"> </img>
         <p class="content has-text-centered is-size-5">
-        We jointly optimize gaussian splatting with camera motion trajectory which explains blurry observation when averaged.
-
-        </p>
+          We jointly optimize gaussian splatting with camera motion trajectory which explains blurry observation when averaged.
+          </p>
+        <img src="image/deblatting_method.png", alt="method", width="100%", height="100%"> </img>
+        
     </div>
 
-    <section class="Training">
-      <div class="container is-max-desktop has-text-centered">
-          <!-- abstract -->
-          <p class="title is-3 mt-5 has-text-centered"> Training Procedure </p>
-          
-          <p class="content has-text-centered is-size-5">
-          You can observe joint optimization of curve motion for training view and 3DGS scene here.    
-          </p>
 
-          <video poster="" id="fantasy_back" autoplay controls muted loop playsinline height="100%">
-            <source src="./video/train_procedure_exblur/sunflowers.mp4" type="video/mp4">
-          </video>
-  
-          <video poster="" id="fantasy_back" autoplay controls muted loop playsinline height="100%">
-            <source src="./video/train_procedure_exblur/bench.mp4" type="video/mp4">
-          </video>
-          <video poster="" id="fantasy_back" autoplay controls muted loop playsinline height="100%">
-            <source src="./video/train_procedure_exblur/jars2.mp4" type="video/mp4">
-          </video>
-  
-          <video poster="" id="fantasy_back" autoplay controls muted loop playsinline height="100%">
-            <source src="./video/train_procedure_deblurnerf/blurball.mp4" type="video/mp4">
-          </video>
-          <video poster="" id="fantasy_back" autoplay controls muted loop playsinline height="100%">
-            <source src="./video/train_procedure_deblurnerf/blurheron.mp4" type="video/mp4">
-          </video>
-  
-          <video poster="" id="fantasy_back" autoplay controls muted loop playsinline height="100%">
-            <source src="./video/train_procedure_deblurnerf/blurcoffee.mp4" type="video/mp4">
-          </video>
+
+    <section class="Datasets">
+      <div class="container is-max-desktop has-text-centered">
+
+        <p class="title is-3 mt-5 has-text-centered"> Dataset </p>
           
-          <!--div id="results-carousel1" class="carousel results-carousel">
-            <div class="item">
-              <img src="image/input_images/001.png", alt="method", width="100%", height="100%"> </img>
-            </div>
-            <div class="item">
-              <img src="image/input_images/001.png", alt="method", width="100%", height="100%"> </img>
-              
-            </div>
-            <div class="item">
-              <img src="image/input_images/001.png", alt="method", width="100%", height="100%"> </img>
-              
-            </div>
-           </div-->
-           
-          </p>
-          <div class="+"></div>
+        <p class="content has-text-centered is-size-5">
+          Exblur Dataset (from ExBluRF, ICCV2023)    
+        </p>
+        <div id="results-carousel1" class="carousel results-carousel">
+          <div class="item">
+            <img src="image/input_images/camellia_0.png", alt="method", width="100%", height="100%"> </img>
+          </div>
+          <div class="item">
+            <img src="image/input_images/camellia_1.png", alt="method", width="100%", height="100%"> </img>
+            
+          </div>
+          <div class="item">
+            <img src="image/input_images/sunflowers_0.png", alt="method", width="100%", height="100%"> </img>
+          </div>
+          <div class="item">
+            <img src="image/input_images/sunflowers_1.png", alt="method", width="100%", height="100%"> </img>
+            
+          </div>
+          <div class="item">
+            <img src="image/input_images/jars_0.png", alt="method", width="100%", height="100%"> </img>
+          </div>
+          <div class="item">
+            <img src="image/input_images/jars_1.png", alt="method", width="100%", height="100%"> </img>
+            
+          </div>
+          <div class="item">
+            <img src="image/input_images/postbox_0.png", alt="method", width="100%", height="100%"> </img>
+          </div>
+          <div class="item">
+            <img src="image/input_images/postbox_1.png", alt="method", width="100%", height="100%"> </img>
+            
+          </div>
+        
+          
+         </div>
+         <br/> <br/>
+         <p class="content has-text-centered is-size-5">
+          Real Camera Motion Dataset (from DeblurNeRF, CVPR2022)    
+        </p>
+        <div id="results-carousel1" class="carousel results-carousel">
+          <div class="item">
+            <img src="image/input_images/blurball_0.png", alt="method", width="100%", height="100%"> </img>
+          </div>
+          <div class="item">
+            <img src="image/input_images/blurball_1.png", alt="method", width="100%", height="100%"> </img>
+            
+          </div>
+          <div class="item">
+            <img src="image/input_images/blurcoffee_0.png", alt="method", width="100%", height="100%"> </img>
+          </div>
+          <div class="item">
+            <img src="image/input_images/blurcoffee_1.png", alt="method", width="100%", height="100%"> </img>
+            
+          </div>
+          <div class="item">
+            <img src="image/input_images/blurheron_0.png", alt="method", width="100%", height="100%"> </img>
+          </div>
+          <div class="item">
+            <img src="image/input_images/blurheron_1.png", alt="method", width="100%", height="100%"> </img>
+            
+          </div>
+          <div class="item">
+            <img src="image/input_images/blurbuick_0.png", alt="method", width="100%", height="100%"> </img>
+          </div>
+          <div class="item">
+            <img src="image/input_images/blurbuick_1.png", alt="method", width="100%", height="100%"> </img>
+            
+          </div>
+        
+          
+         </div>
       </div>
-    <br/> <br/>
+
+      
     <section class="Training">
       <div class="container is-max-desktop has-text-centered">
           <!-- abstract -->
@@ -256,19 +288,6 @@
             <source src="./video/train_procedure_deblurnerf/blurcoffee.mp4" type="video/mp4">
           </video>
           
-          <div id="results-carousel1" class="carousel results-carousel">
-            <div class="item">
-              <img src="image/input_images/001.png", alt="method", width="100%", height="100%"> </img>
-            </div>
-            <div class="item">
-              <img src="image/input_images/001.png", alt="method", width="100%", height="100%"> </img>
-              
-            </div>
-            <div class="item">
-              <img src="image/input_images/001.png", alt="method", width="100%", height="100%"> </img>
-              
-            </div>
-           </div>
            
           </p>
           <div class="+"></div>
